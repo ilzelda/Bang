@@ -3,21 +3,6 @@
 
 #include "components.h"
 
-class Game
-{
-  private:
-    int n_player;
-    int n_sheriff
-    int n_vice;
-    int n_outlaw;
-    int n_renegade;
-    int* player_table;
-  public:
-    Game();
-    void set_n_player(int n);
-    void set_playerrole;
-}
-
 class Player
 {
   private:
@@ -26,15 +11,33 @@ class Player
     int life;
     int place; //자리배치
     char* cards_on_h;
-    Field fld;
-    int range
-    
-
+    struct Field
+    {      
+    };
+    int range;
   public:
     Player();
     ~Player();
+    char* rtnRole() {return role;};
     void draw();
-    int reset_range();
-}
+    int resetRange();
+};
+
+class Game
+{
+  private:
+    int n_player;
+    int n_sheriff;
+    int n_vice;
+    int n_outlaw;
+    int n_renegade;
+    Player* player_table;
+  public:
+    Game();
+    void set_n_player(int n);
+    void setPlayerrole();
+};
+
+
 
 #endif

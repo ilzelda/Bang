@@ -1,8 +1,10 @@
 #ifndef COMPONENTS_H_
 #define COMPONENTS_H_
 
-Card deck[];
-Card used_cards[];
+#include <string>
+
+// Card deck[];
+// Card used_cards[];
 
 class Field
 {
@@ -12,7 +14,7 @@ class Field
   public:
     Field();
     ~Field();
-}
+};
 
 class Character
 {
@@ -22,8 +24,8 @@ class Character
   public:
     Character();
     ~Character();
-    int reset_life();
-}
+    int resetLife();
+};
 
 class Card
 {
@@ -32,10 +34,12 @@ class Card
   public:
     Card():
     ~Card();
-}
+};
 
 class Gun
 {
   int range;
-}
+};
+
+
 #endif
